@@ -1,13 +1,13 @@
 <h1>This album's details: </h1>
 
-<h2>Title: @Model.GetTitle()</h2>
-<h3>Artist: @Model.GetAlbumArtist()</h3>
+<h2>Title: @Model["album"].GetTitle()</h2>
+@* <h3>Artist: @Model["artist"].GetArtistName()</h3> *@
 
-<form action="/albums/delete" method="post">
+@* <form action="/albums/delete" method="post">
   <button type="submit" name="button">Remove this album from your list</button>
-</form>
+</form> *@
 
-<a href='/albums/new'>Add another album </a>
+<a href='/artists/@Model["artist"].GetId()/albums/new'>Add a new album</a>
 <br><br>
 <a href="/albums">Back to albums list</a>
 <br><br>
