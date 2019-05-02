@@ -17,7 +17,8 @@ namespace CdOrganizer.Tests
     public void AlbumConstructor_CreatesInstanceOfAlbum_Album()
     {
       string thisCd = "Now20";
-      Album newAlbum = new Album(thisCd);
+      string thisArtist = "Nelly";
+      Album newAlbum = new Album(thisCd, thisArtist);
       Assert.AreEqual(typeof(Album), newAlbum.GetType());
     }
 
@@ -25,7 +26,8 @@ namespace CdOrganizer.Tests
     public void GetTitle_ReturnsTitle_String()
     {
       string title = "Now34";
-      Album newAlbum = new Album(title);
+      string artist = "Nelly";
+      Album newAlbum = new Album(title, artist);
 
       string result = newAlbum.GetTitle();
 
@@ -36,7 +38,8 @@ namespace CdOrganizer.Tests
     public void SetTitle_SetTitle_String()
     {
       string title = "Now35";
-      Album newAlbum = new Album(title);
+      string artist = "Nelly";
+      Album newAlbum = new Album(title, artist);
 
       string updatedTitle = "Now Kids 35";
       newAlbum.SetTitle(updatedTitle);
@@ -64,8 +67,10 @@ namespace CdOrganizer.Tests
       //Arrange
       string title01 = "Now72";
       string title02 = "Now58";
-      Album newAlbum1 = new Album(title01);
-      Album newAlbum2 = new Album(title02);
+      string artist1 = "Nelly";
+      string artist2 = "DMX";
+      Album newAlbum1 = new Album(title01, artist1);
+      Album newAlbum2 = new Album(title02, artist2);
       List<Album> newList = new List<Album> { newAlbum1, newAlbum2 };
 
       //Act
@@ -79,7 +84,8 @@ namespace CdOrganizer.Tests
     public void GetId_AlbumsInstantiateWithAnIdAndGetterReturns_Int()
     {
       string title = "Now93";
-      Album newAlbum = new Album(title);
+      string artist = "Nelly";
+      Album newAlbum = new Album(title, artist);
 
       int result = newAlbum.GetId();
 
@@ -92,8 +98,9 @@ namespace CdOrganizer.Tests
       // Arrange
       string title01 = "Now101";
       string title02 = "Now91";
-      Album newAlbum1 = new Album(title01);
-      Album newAlbum2 = new Album (title02);
+      string artist = "Nelly";
+      Album newAlbum1 = new Album(title01, artist);
+      Album newAlbum2 = new Album (title02, artist);
       // Act
       Album result = Album.Find(1);
       // Assert

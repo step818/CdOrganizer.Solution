@@ -67,7 +67,6 @@ namespace CdOrganizer.Models
 
       }
       return _instances[0];
-    //return _instances[searchId-1];
     }
 
   }
