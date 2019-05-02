@@ -58,7 +58,16 @@ namespace CdOrganizer.Models
 
     public static Album Find(int searchId)
     {
-      return _instances[searchId-1];
+      for(int i=0; i<_instances.Count; i++)
+      {
+        if(_instances[i]._id == searchId)
+        {
+          return _instances[i];
+        }
+
+      }
+      return _instances[0];
+    //return _instances[searchId-1];
     }
 
   }
