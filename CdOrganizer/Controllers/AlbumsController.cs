@@ -41,10 +41,20 @@ namespace CdOrganizer.Controllers
       return View(album);
     }
 
-    // [HttpPost("/items/delete")]
-    // public ActionResult DeleteAll()
-    // {
-    //   Item.ClearAll();
-    //   return View();
+    [HttpPost("/albums/deleteAll")]
+    public ActionResult DeleteAll()
+    {
+      Album.ClearAll();
+      return View();
     }
+
+    [HttpPost("/albums/delete")]
+    public ActionResult Delete(int id)
+    {
+      Album.RemoveAlbum(id);
+      return View();
+    }
+
+
+  }
 }

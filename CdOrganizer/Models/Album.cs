@@ -46,6 +46,10 @@ namespace CdOrganizer.Models
     {
       _instances.Clear();
     }
+    public static void RemoveAlbum(int id)
+    {
+      _instances.Remove(_instances[id]);
+    }
 
     public int GetId()
     {

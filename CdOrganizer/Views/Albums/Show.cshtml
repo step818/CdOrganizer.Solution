@@ -3,5 +3,12 @@
 <h2>Title: @Model.GetTitle()</h2>
 <h3>Artist: @Model.GetAlbumArtist()</h3>
 
-<a href='albums/new'>Add another album </a>
+<form action="/albums/delete" method="post">
+  <button type="submit" name="button">Remove this album from your list</button>
+</form>
+
+<a href='/albums/new'>Add another album </a>
+<br><br>
+<a href="/albums">Back to albums list</a>
+<br><br>
 <a href='/artists'>View all artists</a>
