@@ -1,0 +1,31 @@
+@using CdOrganizer.Models;
+
+<h1>Albums Index</h1>
+
+<ol>
+@if (Model.Count == 0)
+{
+  <p>There are currently no Albums in your list. Please add an album!</p>
+}
+@if(Model.Count != 0)
+{
+  @foreach (Album album in Model)
+  {
+    <li><a href='/albums/@album.GetId()'>@album.GetTitle()</a></li>
+
+
+  }
+}
+</ol>
+
+<a href="/albums/new">Add a New Album</a><br>
+<br>
+
+<form action="/albums/delete" method="post">
+  <button type="submit" name="button">Clear All Jobs</button>
+</form>
+
+<a href="/artists/new">Add a New Artist</a>
+<br>
+<br>
+<a href="/artists">View Artists Index</a>

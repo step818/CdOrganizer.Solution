@@ -1,0 +1,3 @@
+/* <ul> */
+  /* <li><a href='/album/@album.GetId()'><strong>Artist: </strong>@artist.GetArtist()</li>
+</ul> */
